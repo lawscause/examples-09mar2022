@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="controls"><input type="checkbox" id="cbShowApp" onchange="doShowApp(this);"><label for="showApp">Show
+            App</label></div>
+    <div id="demo"></div>
+</body>
+<script>
+    //calling the function rederApp set the innerHTML in div demo to <h1>App rendered !!</h1>
+    var renderApp = () => document.getElementById("demo").innerHTML = "<h1>App rendered !!</h1>";
+
+    //calling the function rederApp set the innerHTML in div demo to <h2>Login rendered !!<h2>
+    var renderLogin = () => document.getElementById("demo").innerHTML = "<h2>Login rendered !!<h2>";
+
+    //Ternary Operator
+    //The ternary operator is a simplified conditional operator like if / else.
+    //Syntax: condition ? <expression if true> : <expression if false></expression>
+
+    /* pre-es6
+    function doShowApp(aCheckBox) {
+        console.log("here!!");
+        if (aCheckBox.checked) {
+            renderApp();
+        } else {
+            renderLogin();
+        }
+    }
+    */
+
+    //es6  arrow function and ternary operator
+    var doShowApp = (aCheckBox) => aCheckBox.checked ? renderApp() : renderLogin();
+
+    //call function doShowApp using the checkbox cbShowApp's value for checked
+    //to prime the page after it loads
+    doShowApp(document.getElementById('cbShowApp').checked);
+</script>
+
+</html>

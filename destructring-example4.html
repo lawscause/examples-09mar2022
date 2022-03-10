@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p id="demo"></p>
+
+    <script>
+        const vehicleOne = {
+            brand: 'Ford',
+            model: 'Mustang',
+            type: 'car',
+            year: 2021,
+            color: 'red',
+            registration: {
+                city: 'Houston',
+                state: 'Texas',
+                country: 'USA'
+            }
+        }
+
+        const vehicleTwo = {
+            brand: 'Chevy',
+            model: 'Corvette',
+            type: 'car',
+            year: 2021,
+            color: 'yellow',
+            registration: {
+                city: 'Houston',
+                country: 'USA'
+            }
+        }
+
+        const vehicleThree = {
+            brand: 'Honda',
+            model: 'Accord',
+            type: 'car',
+            year: 2022,
+            color: 'blue'
+        }
+
+        myVehicle(vehicleOne)
+        myVehicle(vehicleTwo)
+        myVehicle(vehicleThree)
+
+        function myVehicle({
+            model,
+            registration: {
+                state
+            }
+        }) {
+            console.log(model);
+            console.log(state);
+            const message = 'My ' + model + ' is registered in ' + state + '.';
+
+            document.getElementById("demo").innerHTML += message + '<br>';
+        }
+    </script>
+
+</body>
+
+</html>

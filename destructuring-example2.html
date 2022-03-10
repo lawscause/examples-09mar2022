@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <!DOCTYPE html>
+  <html>
+
+  <body>
+
+    <script>
+      calculate = (a, b) => {
+        const add = a + b;
+        const subtract = a - b;
+        const multiply = a * b;
+        const divide = a / b;
+        const square = a * a;
+        const something = a * b * b;
+
+        let operations = [add, subtract, multiply, divide, square, something];
+
+        document.write(operations);
+        return operations;
+      }
+
+
+      const [add, subtract, multiply, divide, , sthing] = calculate(4, 7);
+
+      document.write("<p>Sum: " + add + "</p>");
+      document.write("<p>Difference " + subtract + "</p>");
+      document.write("<p>Product: " + multiply + "</p>");
+      document.write("<p>Quotient " + divide + "</p>");
+
+      document.write("<p>Some Operation " + sthing + "</p>");
+    </script>
+
+  </body>
+
+  </html>

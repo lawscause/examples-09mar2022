@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <p id="demo"></p>
+
+  <script>
+    const vehicleOne = {
+      brand: 'Ford',
+      model: 'Mustang',
+      type: 'car',
+      year: 2021,
+      color: 'red'
+    }
+
+    const motorcycle = {
+      model: 'Ninja',
+      brand: 'Honda',
+      color: 'green',
+      year: 2020,
+      numberOfWheels: 2,
+      doSomething() {
+        return true;
+      }
+    }
+
+    processVehicle(vehicleOne);
+    processVehicle(motorcycle);
+
+    function processVehicle({
+      type,
+      color,
+      brand,
+      model
+    }) {
+      const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
+
+      document.getElementById("demo").innerHTML += message + '<br>';
+    }
+  </script>
+
+</body>
+
+</html>

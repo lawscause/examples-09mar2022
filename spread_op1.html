@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="demo"></div>
+</body>
+<script>
+    const numbersOne = [1, 2, 3];
+    const numbersTwo = [4, 5, 6];
+    const numbersCombined = [...numbersOne, ...numbersTwo];
+
+
+    document.getElementById("demo").innerHTML += '<p>' + numbersOne + '</p>';
+    document.getElementById("demo").innerHTML += '<p>' + numbersTwo + '</p>';
+    document.getElementById("demo").innerHTML += '<p>' + numbersCombined + '</p>';
+</script>
+
+</html>

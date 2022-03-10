@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p id="demo"></p>
+
+
+
+</body>
+<script type="module">
+    import { name, age } from "./person.js";
+    import message from "./message.js";
+
+    document.getElementById("demo").innerHTML = "My name is " + name;
+    document.getElementById("demo").innerHTML += ", I am " + age + "." + "<br/>";
+
+    document.getElementById("demo").innerHTML += message() + "<br/>";
+
+</script>
+
+</html>
